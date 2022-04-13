@@ -11,9 +11,9 @@
   <div class="keys">
     <div data-key="65" class="key">
       
-      <script>
+      <!-- <script>
         document.getElementsByClassName('keys').addEventListener('keydown', console.log('65'))
-      </script>
+      </script> -->
       <kbd>A</kbd>
       <span class="sound">clap</span>
     </div>
@@ -62,9 +62,11 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
+  
+
   function removeTransition(e) {
     if (e.propertyName !== 'transform') return;
-    e.target.classList.remove('playing');
+    this.classList.remove('playing');
   }
 
   function playSound(e) {
